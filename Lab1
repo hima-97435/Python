@@ -1,0 +1,114 @@
+
+
+#  Lab-->1(14-Jan-2024) 
+
+# Basic conversion of data types
+
+# String to:
+name ="123"
+
+# String to int
+print(2*int(name))
+
+# String to float
+print(2*float(name))
+
+# Int to:
+x =1
+
+# Int to strings:
+print("The speed of the fan is at :"+str(x))
+
+# Int to float
+print(float(x))
+
+# float to:
+y =12.23
+
+# float to int :
+print("The int version of y is :"+str(int(y)))
+
+# float to string:
+print("The batting team run rate till 10 over is :"+str(y))
+
+
+# 01)   Woking with differnt data type :
+Name ="Himanshu"
+Age=19
+MAth_mark=67.89
+day=True
+
+print("My name is : "+Name)
+print("My age is : "+str(Age))
+print("My Math mark is : "+str(MAth_mark))
+print("Is 1*1 =1 :"+str(day))
+
+# 02 ) For Python version  we can simply type this command in terminal that "python --version".
+
+# 03)  Hetrogenous List --> it is just like ArrayList in Java because it can store values of differnt data type in a single list. 
+
+details_of_student=["Himanshu",6 , 67.89 , True]
+print(details_of_student[0])
+
+# 04) Converting a data from one type to another 
+
+# a) int to float
+alpha=12
+beta=float(alpha)
+
+print(alpha)
+print(beta)
+
+A1=12.567
+print(A1)
+A1=int(A1)
+print(A1)
+
+#b) boolean to string
+
+
+my_bool = True
+print(str(my_bool))
+
+# 05) use of input and if else (conditional statement) and perform various arithmetic operation
+
+#  a) Use of If and else conditional statement
+
+
+# apple_quantity=int(input("How much apple does a yellow basket contain :"))
+# print("The apple quantity inside yellow basket : "+str(apple_quantity))
+
+
+# number=int(input("Enter a number : "))
+# if number >0:
+#     if number %2 ==0:
+#         print("Number is positive as well as even ")
+#     else :
+#         print("number is positive but not even ")
+# else:
+#     print("Number is negative ")
+
+# b) perform arithmetic operation with inputs.
+
+n1=int(input("Enter a number :"))
+n2=int(input("enter another number :"))
+
+# Sum of two number
+print("Sum of the two number : "+str(n1+n2))
+
+# Subtarction of two number
+print("Subtraction of two number : "+str(n1-n2))
+
+# Multiplication of two number 
+print("Multiplication of two number : "+str(n1*n2))
+
+# division of two number 
+print("Division of n1 and n2 is : "+str(n1/n2))
+
+# Modulus of two number 
+print("Modulus of  n1 w.r.t n2 number is : "+str(n1%n2))
+
+# Exponent of two number 
+print("Exponent of n1 to the power of n2 number :"+str(n1**n2))
+
+
