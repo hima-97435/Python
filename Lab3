@@ -1,0 +1,75 @@
+# Lab3  --> (31 JAnuary , 2023)
+# Author name --> Himanshu Pokhriyal
+ 
+# 01)
+
+# n = int(input("Enter a number : "))
+# cnt=0
+# for i in range(2,n):
+#     if n%i == 0:
+#         cnt=cnt+1
+#     else:
+#         continue
+# if cnt>0:
+#      if n%2 ==0 :
+#          print("Number is even but not prime .")
+#      else:
+#          print("Number is odd and not prime ")
+# else:
+#     if n%2 ==0 :
+#          print("Number is even but it is prime .")
+#     else:
+#          print("Number is odd but it is prime")
+
+# Q2)
+
+# string=input("Enter a string : ")
+# # for  c in  (string):
+# #     print(c,end='')
+# print("Forward string : ", string)
+
+# print("Backward string : ", string[::-1])
+
+# Q3)
+
+# String=input("Enter a string : ")
+# sub_str=input("Enter a sub string : ")
+
+# cnt=0
+# for j in range(len(String) - len(sub_str)+ 1):
+#     string_to_compare=String[j:j+len(sub_str)]
+
+#     if string_to_compare == sub_str:
+#        cnt+=1
+
+# print(cnt)
+
+# Q4)
+# first_name=input("Enter the first name : ")
+# middle_name=input("Enter the last name : ")
+# last_name=input("Enter the Last name : ")
+
+# print(first_name[0],".",middle_name[0],"",last_name)
+
+# Q5)
+
+
+# str="ABaBCbGc"
+# new_string=str.upper()
+# # for c in str:
+# #     if
+# cnt=0
+# mydict={}
+# print(new_string)
+# for c in new_string:
+#     if c in mydict:
+#         mydict[c] +=1
+#     else:
+#         mydict[c]=1
+# # print(mydict,end="\n")
+# for char,count in mydict.items():
+#     print(f"{count}{char}")
+
+        
+
+
