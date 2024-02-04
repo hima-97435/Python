@@ -1,0 +1,374 @@
+# Date-->02 Feburary 2024
+# Author name-->Himanshu Pokhriyal
+
+#Question1- A)-> Create the list through different ways,
+
+# 01 -->Using Square Bracket
+# list1=[1,2,3,4];
+# print(list1)
+
+# 02 -->Using the list() operator.
+
+# my_list=list((1,2,3,4,4,5));
+# print(my_list)
+
+# 03 -->Using List Comprehension
+
+# my_list1=[x for x in range(1,6)];
+# print(my_list1)
+
+# 04 --> Using append method
+
+# my_List2=[]
+# my_List2.append(1);
+# my_List2.append(2);
+# my_List2.append(3);
+
+# print(my_List2)
+
+# 05 -->Using extend keyword
+
+# my_list3=[]
+# my_list3.extend([1,2,3,4,5,6,7]);
+
+# print(my_list3)
+
+# 06 -->Using Multiplication operator
+# my_list4=[0]*5;
+
+# print(my_list4)
+
+# 07 --> Using map() and lamda function:
+# my_list5=list(map(lambda x:x**2 , range(1,6)))
+# print(my_list5)
+
+
+#Question1- B)->display the list content 
+
+# my_List=[1,2,3,4,5];
+
+# 01 Using for Loop:
+
+# for ele in my_List:
+    # print(ele)
+
+# print("*******")
+# 02 Using Direct access:
+# print(my_List[0])
+# print(my_List[1])
+
+# print("****")
+
+# 03  Using Slicing:
+
+# print(my_List[:3])
+# print(my_List[2:4])
+
+# 04 Using string comprehension:
+# print("*****")
+# print([ele for ele in my_List])
+
+# 05 Using the 'join()' method:
+
+# print(' '.join(map(str,my_List)))
+
+# 06 Using '*' operator:
+# print(*my_List)
+
+
+# Question2)=> Do the list cloning.
+
+# def cloning(li1):
+#     #  a-> Using slicing concept
+#     # li_copy=li1[:]
+
+#     # b-> Using extend keyword
+#     # li_copy=[]
+#     # li_copy.extend(li1)
+
+#     # c->Using assignment Operator
+#     # li_copy=li1
+
+#     # d->Copying list using list comphrension:
+#     # li_copy=[i for i in li1]
+
+#     # e->Using append method to copy list.
+#     # li_copy=[]
+#     # for item in li1: li_copy.append(item)
+
+#     # f->Using Copy Method
+#     # li_copy=[]
+#     # li_copy=li1.copy()
+
+
+#     return li_copy
+
+# from collections import deque
+# from functools import reduce
+
+# def clone_list(li1):
+    # return reduce(lambda x,y: x + [y] , li1, [])
+
+# li1=[1,[2,3],4,5]
+
+# li2=cloning(li1)
+# k->To do this function you need to import:
+# import copy
+# li3=copy.copy(li2)
+# li3=copy.dee
+
+# g-> Using enumerate keyword
+# li_copy=[ i for a,i in enumerate(li1)]
+
+# h-> USing map function:
+# li_copy = map(int,li1) Isme thoda error arra h
+# print("After Cloning : ", *li_copy)
+
+# i-> Using slice function:
+# li_copy=li1[slice(len(li1))]
+
+# j-> Using deque function: 
+# for this you need to import 
+# from collections import deque
+
+# copy_list= deque(li1)
+# copy_list=list(copy_list)
+# print("Before Cloning : ",li1)
+# print("After Cloning : ", copy_list)
+
+# l->Using reduce()
+# li2=clone_list(li1)
+
+
+
+# print("Before Cloning : ",li1)
+# print("After Cloning : ", li2)
+
+# Question3)->Show the list processing through append, insert, extend, count, remove pop, sort, max,
+# min function
+# if __name__ == '__main__':
+#     N = int(input("Enter the number : "))
+#     l=[];
+#     for i in range(0,N):
+#         ans=input("Enter the main command first and then neccessary inputs :").split();
+#         if ans[0] == "insert":
+#             l.insert(int(ans[1]),int(ans[2]));
+#         elif ans[0] == "append":
+#             l.append(int(ans[1]))
+#         elif ans[0] == "pop":
+#             l.pop();
+#         elif ans[0] == "extend":
+#             l.extend(map(int , ans[1:]))
+#         elif ans[0] == "count":
+#             print(l.count(int(ans[1])))
+#         elif ans[0] == "max":
+#             print(max(l))
+#         elif ans[0] == "min":
+#             print(min(l))
+#         elif ans[0] == "print":
+#             print(l)
+#         elif ans[0] == "remove":
+#             l.remove(int(ans[1]))
+#         elif ans[0] == "sort":
+#             l.sort();
+#         else:
+#             l.reverse();
+
+#     print(l)
+
+# Question4)->Find the common elements between two lists.
+
+# li1=[1,2,3,4,5]
+# li2=[3,4,5,6,7]
+
+# N = int(input("Enter the number of elements in the list: "))
+# l1 = []
+
+# for i in range(N):
+#     element = input("Enter element {}: ".format(i+1))
+#     l1.append(int(element))  
+    
+# N1 = int(input("Enter the number of elements in the list: "))
+# l2 = []
+
+# for i in range(N1):
+#     element = input("Enter element {}: ".format(i+1))
+#     l2.append(int(element))  
+    
+
+# # print("List:", l)
+
+# common_elem=[element for element in l1 if element in l2]
+
+# print("Common Element in the list are : ",common_elem)
+
+        
+# Question5)->Through function, show the mutable property of list.
+
+# def modify(list):
+#     print("Inside modify function,  before modification : ",list)
+#     list.append(4)
+#     list[0]=100
+#     print("After modify function , after modification : ",list)
+
+
+
+# list = [1,2,3]
+# print("Before calling modify function : ",list)
+
+# modify(list)
+
+# print("After calling modify function : ",list)
+
+# Question6)->
+# 6>A=>Create the tuple through different ways,
+
+# 01 -->Using Square Bracket
+# tuple1={1,2,3,4};
+# print(tuple1)
+
+# 02 -->Using the tuple() operator.
+
+# my_tuple=tuple((1,2,3,4,4,5));
+# print(my_tuple)
+
+# 03 -->Using List Comprehension
+
+# my_tuple=[x for x in range(1,6)];
+# tuple=tuple(my_tuple)
+# print(tuple)
+
+# No, tuples are immutable in Python,
+# So append() , extend() keyword is not used.
+
+
+# 06 -->Using Multiplication operator
+# my_tuple=(1,2)*3;
+
+# print(my_tuple)
+
+# 07 --> Using map() and lamda function:
+# my_tuple=tuple(map(lambda x:x**2 , range(1,6)))
+# print(my_tuple)
+
+
+# 6->B=>display the tuple content
+
+# my_tuple={1,2,3,4,5};
+
+# 01 Using for Loop:
+
+# for ele in my_tuple: 
+#     print(ele)
+
+# print("*******")
+# 02 Using direct access:
+# print(my_tuple)
+# print("****")
+
+# 03  Using join()  method :
+# print(", ".join(map(str,my_tuple)))
+
+# 04 Using string comprehension:
+# print("*****")
+# for index,value in enumerate(my_tuple):
+    # print("Index : ",index, "Value : ",value)
+
+# 05 Using '*' operator:
+# print(*my_tuple)
+
+
+# 6-2=> Do the tuple cloning.
+# my_tuple=(1,23,45,77,89)
+
+import copy
+
+# a->Using tuple constructor:
+
+# clonned_tuple=tuple(my_tuple)
+# print(clonned_tuple)
+
+# b->USing slicing:
+# clonned_tuple=my_tuple[:]
+# print(clonned_tuple)
+
+# c->using copy operator.
+
+# cloned_tuple=copy.copy(my_tuple)
+# print(cloned_tuple)
+
+# d->Using '+' opeartor.
+
+# cloned_tuple=my_tuple+()
+# print(cloned_tuple)
+
+#  6-3=>Show the list processing through append, insert, extend, count,
+#  remove pop, sort, max,min function
+
+# Since , tuple are immutable , meaning they cannot be modified after creation.
+
+# my_tuple=(1,3,5,7,9,3)
+
+# # count() -> Count the occurance of a value in the tuple.
+# print("Count of 3 in my_tuple : ",my_tuple.count(3))
+
+# # index() -> Find the index of the first occurance of a value in a loop.
+# print("Index of 5  in my_tuple : ",my_tuple.index(5))
+
+# # sorted() -> return a new sorted list from the elmets of the tuple
+# print("Sorted tuple : ",sorted(my_tuple))
+
+# # max() ->  Return the maximum value in the tuple.
+# print("Maximum Value : ",max(my_tuple))
+
+# # min() -> return the minimum value in the tuple.
+# print("Minimum Value : ",min(my_tuple))
+
+
+# 6-4=>Find the common elements between two lists.
+
+# tuple1=(1,2,3,4)
+# tuple2=(3,4,5,6)
+
+# # 01 Using set intersection.
+# common_elem=set(tuple1).intersection(set(tuple2))
+# print(common_elem)
+
+# 02 Using string comprehension.
+
+# common_elem=[ element for element   in tuple1 if element in tuple2 ]
+# print(common_elem)
+
+# 03 using '&' operator:
+
+# common_elem=set(tuple1) & set(tuple2)
+# print(common_elem)
+
+# 04 using filter command
+
+# common_elem=tuple(filter(lambda x: x in tuple2,tuple1))
+# print(common_elem)
+
+# 6-5=>Through function, show the mutable property of list.
+
+# def modify_tuple(t):
+#     # Convert the tuple to a list to make modifications
+#     t_list = list(t)
+    
+#     # Modify the list (mutable)
+#     t_list[0] = 100
+#     t_list.append(99)
+    
+#     # Convert the list back to a tuple
+#     modified_tuple = tuple(t_list)
+    
+#     return modified_tuple
+
+# # Original tuple
+# my_tuple = (1, 2, 3)
+
+# # Call the function to modify the tuple
+# modified_tuple = modify_tuple(my_tuple)
+
+# print("Original Tuple:", my_tuple)
+# print("Modified Tuple:", modified_tuple)
