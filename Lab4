@@ -372,3 +372,48 @@ import copy
 
 # print("Original Tuple:", my_tuple)
 # print("Modified Tuple:", modified_tuple)
+
+# # Lab-04 -->{extra}
+# Date->8 feb 2024
+# Question1)
+# WAP to read the record of n students in a dictionary containing key/value pairs of name: [marks]. Print
+# the average of the marks obtained by the particular student correct to 2 decimal places.
+
+# if __name__ == '__main__':
+#     n = int(input())
+#     student_marks = {}
+#     for _ in range(n):
+#         name, *line = input().split()
+#         scores = list(map(float, line))
+#         student_marks[name] = scores
+#     query_name = input()
+#     output=list(student_marks[query_name])
+#     per=sum(output)/len(output)
+#     print("%.2f" % per)
+
+# Question2)
+# WAP to input a list of scores for N students in a list data type. Find the score of the runner-up and print
+# the output.
+
+# Solution:
+# if __name__ == '__main__':
+#     n = int(input())
+#     arr = map(int, input().split())
+#     arr1 = set(arr)
+#     arr2 = sorted(arr1)
+#     print(arr2[-2])
+    
+
+# # Question3)
+# Rupal has a huge collection of country stamps. She decided to count the total number of distinct country
+# stamps in her collection. She asked for your help. You pick the stamps one by one from a stack of country
+# stamps. Find the total number of distinct country stamps using a suitable data type.
+
+# Solution:
+# n=int(input())
+# Country=set()
+# for i in range(n):
+#     Country.add(input())
+# print(len(Country))    
+
+
